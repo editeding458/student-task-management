@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import Register from './pages/Register'
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 function App() {
-  const [count, setCount] = useState(0)
+  const route = createBrowserRouter([
+    {
+      path: "/Login",
+      element: <Login />
+    },
+    {
+      path: "/Register",
+      element: <Register />
+    },
+  ]);
 
-  return (
-    <>
-      <Header/>
-      <Register/>
-  
-    </>
-
-  )
+  return <RouterProvider router={route} />;
 }
-
-export default App
+export default App;
