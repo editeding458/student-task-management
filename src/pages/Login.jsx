@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -30,6 +31,10 @@ const Login = () => {
           </button>
         </div>
       </form>
+
+      <p className="link-text">
+        Don't have an account? <Link to="/Register">Register here</Link>
+      </p>
     </div>
   );
 };

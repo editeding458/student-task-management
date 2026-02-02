@@ -4,6 +4,10 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 function App() {
   const route = createBrowserRouter([
+      {
+      path: "/",
+      element: < Login/>
+    },
     {
       path: "/Login",
       element: <Login />
