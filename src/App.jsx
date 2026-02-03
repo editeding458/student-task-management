@@ -11,7 +11,7 @@ import Register from "./pages/Register.jsx";
 
 const DefaultRoute = () => {
   const loginData = JSON.parse(localStorage.getItem("loginData"));
-  if (lo) {
+  if (loginData) {
     return <Navigate to="/Login" replace />;
   }
   return <Navigate to="/Register" replace />;
