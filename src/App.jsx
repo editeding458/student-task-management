@@ -4,17 +4,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import AuthGuard from "./auth/AuthGuard.jsx";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+
 const DefaultRoute = () => {
-  const authData = JSON.parse(localStorage.getItem("authData"));
-  if (authData) {
+  const loginData = JSON.parse(localStorage.getItem("loginData"));
+  if (loginData) {
     return <Navigate to="/Login" replace />;
   }
   return <Navigate to="/Register" replace />;
-  
-
 };
 function App() {
   const route = createBrowserRouter([
@@ -24,15 +24,27 @@ function App() {
     },
     {
       path: "/Login",
-      element: <Login />,
+      element: (
+        <AuthGuard required={false}>
+          <Login />
+        </AuthGuard>
+      ),
     },
     {
       path: "/Register",
-      element: <Register />,
+      element: (
+        <AuthGuard required={false}>
+          <Register />
+        </AuthGuard>
+      ),
     },
-     {
+    {
       path: "/dashboard",
-      element: <Dashboard />,
+      element: (
+        <AuthGuard required={true}>
+          <Dashboard />
+        </AuthGuard>
+      ),
     },
   ]);
 
