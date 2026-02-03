@@ -11,7 +11,7 @@ import Register from "./pages/Register.jsx";
 
 const DefaultRoute = () => {
   const loginData = JSON.parse(localStorage.getItem("loginData"));
-  if (loginData) {
+  if (lo) {
     return <Navigate to="/Login" replace />;
   }
   return <Navigate to="/Register" replace />;
@@ -51,3 +51,4 @@ function App() {
   return <RouterProvider router={route} />;
 }
 export default App;
+         
