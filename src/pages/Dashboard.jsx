@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import TaskList from "../components/TaskList";
 import "./Dashboard.css";
 const Dashboard = () => {
   const navigate = useNavigate("");
@@ -11,8 +12,11 @@ const Dashboard = () => {
   };
   return (
     <div>
-      <Navbar title="Task Manager" onLogout={handleLogout} />
-      <h1>This is Dashboard.</h1>
+      <Navbar title="Task Management" onLogout={handleLogout} />
+      <h1>MY TASKS</h1>
+      <TaskList/>
+
+     
     </div>
   );
 };

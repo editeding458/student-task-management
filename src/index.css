@@ -10,15 +10,6 @@
   box-sizing: border-box;
 }
 
-/*.error-msg {
-  color: red;
-  font-size: 0.8rem;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  display: block;
-  text-align: left;
-}*/
-
 body {
   font-family: "Inter", sans-serif;
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -100,7 +91,8 @@ button {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/*-------------- Task Css----------*/
+/* ---------------------------------- Task CSS -------------------------------- */
+
 .page-center {
   display: flex;
   justify-content: center;
@@ -108,12 +100,14 @@ button {
   min-height: 100vh;
   width: 100%;
 }
+
 .container {
   width: 95%;
   max-width: 1800px;
   margin: 0 auto;
   padding: 20px;
 }
+
 .auth-container {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -126,6 +120,7 @@ button {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
   text-align: center;
 }
+
 .auth-container h2 {
   margin-bottom: 20px;
   font-weight: 600;
@@ -138,6 +133,7 @@ form {
   flex-direction: column;
   gap: 15px;
 }
+
 input,
 textarea,
 select {
@@ -149,27 +145,32 @@ select {
   color: #ffffff;
   font-size: 1rem;
   outline: none;
-  transition: all0.3s ease;
+  transition: all 0.3s ease;
 }
+
 select option {
   background-color: #1a1a2e;
   color: #fff;
 }
-input :focus,
+
+input:focus,
 textarea:focus,
 select:focus {
   border-color: #00d2ff;
-  box-shadow: 0 0 6px rgba(0, 210, 255, 0.3);
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.3);
 }
+
 input::placeholder,
 textarea::placeholder {
   color: #b3b3b3;
 }
+
 .link {
   margin-top: 15px;
   color: #b3b3b3;
   font-size: 0.9rem;
 }
+
 .link a {
   color: #00d2ff;
   font-weight: bold;
@@ -177,11 +178,13 @@ textarea::placeholder {
   margin-left: 5px;
   transition: all 0.3s ease;
 }
+
 .link a:hover {
   color: #ffffff;
   text-decoration: underline;
   text-shadow: 0 0 10px #00d2ff;
 }
+
 .task-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -197,19 +200,23 @@ textarea::placeholder {
   padding: 20px;
   transition: transform 0.3s ease;
 }
+
 .task-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 .task-card.completed {
   opacity: 0.7;
   border-color: #00b894;
 }
+
 .task-card p {
   color: #b3b3b3;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
+
 .task-meta {
   display: flex;
   justify-content: space-between;
@@ -217,6 +224,7 @@ textarea::placeholder {
   font-size: 0.8rem;
   color: #b3b3b3;
 }
+
 .priority-badge {
   padding: 4px 8px;
   border-radius: 4px;
@@ -224,19 +232,28 @@ textarea::placeholder {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .priority-high {
   background: rgba(255, 65, 108, 0.3);
+  color: #ff416c;
+}
+
+.priority-medium {
+  background: rgba(255, 206, 86, 0.3);
   color: #ffce56;
 }
+
 .priority-low {
   background: rgba(0, 184, 148, 0.3);
   color: #00b894;
 }
+
 .task-actions {
   display: flex;
   gap: 10px;
   margin-top: 15px;
 }
+
 .btn-icon {
   width: 35px;
   height: 35px;
@@ -246,6 +263,7 @@ textarea::placeholder {
   align-items: center;
   justify-content: center;
 }
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -256,6 +274,7 @@ textarea::placeholder {
   align-items: center;
   z-index: 1000;
 }
+
 .modal-content {
   background: #1a1a2e;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -264,6 +283,7 @@ textarea::placeholder {
   width: 90%;
   max-width: 500px;
 }
+
 .error-msg {
   color: red;
   font-size: 0.8rem;
