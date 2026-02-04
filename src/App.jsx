@@ -12,9 +12,9 @@ import Register from "./pages/Register.jsx";
 const DefaultRoute = () => {
   const loginData = JSON.parse(localStorage.getItem("loginData"));
   if (loginData) {
-    return <Navigate to="/Login" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
-  return <Navigate to="/Register" replace />;
+  return <Navigate to="/Login" replace />;
 };
 function App() {
   const route = createBrowserRouter([
@@ -46,6 +46,7 @@ function App() {
         </AuthGuard>
       ),
     },
+
   ]);
 
   return <RouterProvider router={route} />;

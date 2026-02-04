@@ -54,11 +54,12 @@ const Login = () => {
       ) {
         localStorage.setItem("loginData", JSON.stringify(loginData));
         navigate("/Dashboard");
+        alert("Login successfully...!");
       } else {
         alert("invalid email or password");
       }
     } else {
-      alert("Somthing went wrong!");
+      alert("Something went wrong!");
     }
   };
   return (

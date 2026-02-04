@@ -58,7 +58,7 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     e.preventDefault();
     if (validate()) {
       localStorage.setItem("authData", JSON.stringify(formData));
