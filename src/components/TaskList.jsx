@@ -38,6 +38,7 @@ useEffect(()=>{
                 className="btn-icon"
                 style={{ background: "#ff416c" }}
                 title="Delete Task"
+                
               >
                 🗑️
               </button>
