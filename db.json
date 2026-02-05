@@ -8,7 +8,7 @@
       "completed": false,
       "priority": "Medium"
     },
-     {
+    {
       "id": "2",
       "title": "Welcome Task 2",
       "description": "This is your task served from json-server",
@@ -16,7 +16,7 @@
       "completed": false,
       "priority": "High"
     },
-     {
+    {
       "id": "3",
       "title": "Welcome Task 3",
       "description": "This is your task served from json-server",
@@ -24,7 +24,7 @@
       "completed": false,
       "priority": "Low"
     },
-     {
+    {
       "id": "4",
       "title": "Welcome Task 4",
       "description": "This is your task served from json-server",
@@ -32,7 +32,6 @@
       "completed": false,
       "priority": "High"
     }
-    
+
   ]
-  
 }
