@@ -5,7 +5,7 @@ const TaskForm = ({ addTask }) => {
     title: "",
     description: "",
     dueDate: "",
-    priority: "Low",
+    priority: "Medium priority",
   });
 
   const [errors, setErrors] = useState({});
@@ -60,7 +60,7 @@ const TaskForm = ({ addTask }) => {
       title: "",
       description: "",
       dueDate: "",
-      priority: "Low",
+      priority: "Medium priority",
     });
     setErrors({});
   };
