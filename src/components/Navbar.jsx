@@ -6,9 +6,9 @@ function Navbar({title,onLogout}) {
         <h1>{title}</h1>
         </div>
         <div className="navbar-actions">
-            <button className="btn-primary">
+           {/* <button className="btn-primary">
                 Add Task
-            </button>
+            </button>*/}
           <button className="btn-secondary"onClick={onLogout}>
             Logout
           </button>
