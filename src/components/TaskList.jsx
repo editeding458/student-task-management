@@ -1,16 +1,20 @@
 
-const TaskList = ({ tasks, editingTask,deletingTask }) => {
+const TaskList = ({ tasks, editingTask, deletingTask, handleCompleteTask }) => {
   const handleEditClick = (task) => {
     editingTask(task);
   };
-   const handleDeleteClick = (taskId) => {
+  const handleDeleteClick = (taskId) => {
     deletingTask(taskId);
   };
   return (
     <>
       <div className="task-grid">
         {tasks.map((task) => (
-          <div  className="task-card" style={{ position: "relative" }}>
+          <div
+            key={task.id}
+            className={`task-card ${task.complete ?"complete":""}`}
+            style={{ position: "relative" }}
+          >
             <h3>{task.title}</h3>
             <p>{task.description}</p>
 
@@ -24,6 +28,7 @@ const TaskList = ({ tasks, editingTask,deletingTask }) => {
             <div className="task-actions">
               <button
                 className="btn-icon"
+                 disabled={task.completed}
                 style={{ background: "#00d2ff" }}
                 title="Edit Task"
                 onClick={() => handleEditClick(task)}
@@ -33,17 +38,21 @@ const TaskList = ({ tasks, editingTask,deletingTask }) => {
 
               <button
                 className="btn-icon"
+                
                 style={{ background: "#00b894" }}
                 title="Mark Complete"
+                onClick={() => handleCompleteTask(task.id)}
               >
+                {task.completed? "Undo":""}
                 ✔️
               </button>
 
               <button
                 className="btn-icon"
+                 disabled={task.completed}
                 style={{ background: "#ff416c" }}
                 title="Delete Task"
-                  onClick={() => handleDeleteClick(task.id)}
+                onClick={() => handleDeleteClick(task.id)}
               >
                 🗑️
               </button>
